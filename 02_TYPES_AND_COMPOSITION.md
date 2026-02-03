@@ -381,3 +381,5 @@ Place these declarations near your type definition. They're documentation and sa
 Types model your domain; errors are part of your API. In Go, errors are values—not exceptions. They're returned, not thrown. How you design error types, wrap them, and handle them at boundaries is as important as your data types. The next document explores **error philosophy**: the difference between sentinel errors, typed errors, and opaque errors—and introduces the **boundary vs core** framing that runs through the rest of this handbook.
 
 → Continue to [Error Philosophy](03_ERROR_PHILOSOPHY.md)
+
+→ Deep dive: [Interface Patterns](DD_INTERFACE_PATTERNS.md) — small interfaces, implicit implementation, and design patterns for composition

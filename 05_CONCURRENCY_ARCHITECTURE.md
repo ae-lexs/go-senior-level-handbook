@@ -583,3 +583,7 @@ Goroutines need to stop gracefully when your application terminates. But termina
 The next document explores **graceful shutdown**: signal handling, shutdown ordering, timeout budgets, and the patterns that ensure your application terminates cleanly without losing data or leaving connections dangling.
 
 → Continue to [Graceful Shutdown](06_GRACEFUL_SHUTDOWN.md)
+
+→ Deep dive: [Channel Patterns](DD_CHANNEL_PATTERNS.md) — fan-out/fan-in, pipelines, select patterns, and or-done
+
+→ Deep dive: [Worker Pools](DD_WORKER_POOLS.md) — bounded concurrency, back-pressure, and job queues

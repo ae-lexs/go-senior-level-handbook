@@ -472,3 +472,5 @@ Context coordinates the lifecycle of individual operations. But who owns the gor
 The next document explores **concurrency architecture**: patterns for safe, maintainable concurrent systems. It introduces the critical concept of *goroutine ownership*—the rule that **the code which starts a goroutine must ensure it can stop**. This principle mirrors context ownership: whoever creates a derived context owns its cancellation; whoever spawns a goroutine owns its termination.
 
 → Continue to [Concurrency Architecture](05_CONCURRENCY_ARCHITECTURE.md)
+
+→ Deep dive: [Time and Clocks](DD_TIME_AND_CLOCKS.md) — injected clocks, deadlines vs timeouts, and testable time

@@ -58,7 +58,7 @@ Some documents are **conceptually sequential** (01–06 form a tight chain). Oth
 
 ## Deep Dives
 
-These documents go deeper on specific topics. Read them after completing the prerequisite core document.
+These documents go deeper on specific topics. Read them after completing the prerequisite core document(s).
 
 Deep dives **do not introduce new core invariants**—they refine, stress-test, and apply existing ones to specialized contexts.
 
@@ -69,6 +69,8 @@ Deep dives **do not introduce new core invariants**—they refine, stress-test, 
 | [Worker Pools](DD_WORKER_POOLS.md) | Bounded concurrency, back-pressure, job queues | 05 |
 | [Time and Clocks](DD_TIME_AND_CLOCKS.md) | Injected clocks, deadlines vs timeouts, testable time | 04 |
 | [Dependency Injection](DD_DEPENDENCY_INJECTION.md) | Constructor injection, functional options, wire-free DI | 08 |
+| [HTTP Server Patterns](DD_HTTP_SERVER_PATTERNS.md) | Handlers as translation layers, middleware, routing, shutdown | 03, 04, 06 |
+| [gRPC Server Patterns](DD_GRPC_SERVER_PATTERNS.md) | Service implementations, interceptors, deadline propagation | 03, 04, 06 |
 
 ---
 
@@ -94,6 +96,8 @@ graph TB
         DD3[DD_WORKER_POOLS]
         DD4[DD_TIME_AND_CLOCKS]
         DD5[DD_DEPENDENCY_INJECTION]
+        DD6[DD_HTTP_SERVER_PATTERNS]
+        DD7[DD_GRPC_SERVER_PATTERNS]
     end
 
     C01 --> C02 --> C03 --> C04 --> C05 --> C06 --> C07 --> C08 --> C09
@@ -103,6 +107,12 @@ graph TB
     C05 --> DD2
     C05 --> DD3
     C08 --> DD5
+    C03 --> DD6
+    C04 --> DD6
+    C06 --> DD6
+    C03 --> DD7
+    C04 --> DD7
+    C06 --> DD7
 
     C03 -->|"errors flow through"| C04
     C04 -->|"context controls"| C05
@@ -110,6 +120,7 @@ graph TB
     C06 -->|"testing verifies"| C07
     DD2 -->|"patterns used in"| DD3
     DD4 -->|"testability enables"| C07
+    DD6 -->|"parallels"| DD7
 ```
 
 ---

@@ -530,3 +530,5 @@ You've now completed the core document sequence: from Go's design philosophy thr
 The final core document is the **Quick Reference**: a condensed cheat sheet of invariants, decision matrices, and interview signals from across the handbook. It's designed for the day before an interview, when you need to refresh the key principles without re-reading everything.
 
 → Continue to [Quick Reference](09_QUICK_REFERENCE.md)
+
+→ Deep dive: [Dependency Injection](DD_DEPENDENCY_INJECTION.md) — constructor injection, functional options, and wire-free DI
