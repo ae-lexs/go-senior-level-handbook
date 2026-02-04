@@ -308,7 +308,6 @@ g.Go(func() error {
 ```
 
 **Warning about `default`:** The `default` case makes the select non-blocking. This is correct only when the work in `default` is naturally bounded or rate-limited. Without work that blocks or yields, this becomes a busy loop consuming 100% CPU. For long-running goroutines, prefer blocking selects with explicit work channels or tickers.
-```
 
 ### Preventing Goroutine Leaks
 
