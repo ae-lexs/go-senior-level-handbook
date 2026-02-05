@@ -120,7 +120,6 @@ func writeJSON(w http.ResponseWriter, status int, v any) {
 ```
 
 **Invariant:** `writeJSON` (or your equivalent helper) should be the *only* function that writes responses in handlers. A single write path prevents scattered `w.Write()` calls, makes response formatting consistent, and provides one place to add envelopes, compression, or observability later.
-```
 
 **Anti-pattern—writing before error check:**
 
